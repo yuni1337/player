@@ -1,13 +1,7 @@
 package org.example;
 
-import javax.swing.*;
-import java.awt.*;
-import javax.sound.sampled.*;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
-import javazoom.jl.decoder.Bitstream;
-import javazoom.jl.decoder.BitstreamException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 public class AudioFilePlayer {
@@ -34,10 +28,6 @@ public class AudioFilePlayer {
                     }
                 });
                 playbackThread.start();
-            } else {
-                // Для других форматов, например .mp4
-                System.out.println("Unsupported file format: " + file.getName());
-                JOptionPane.showMessageDialog(null, "Unsupported file format", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } catch (Exception e) {
             e.printStackTrace();
